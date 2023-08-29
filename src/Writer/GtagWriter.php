@@ -17,6 +17,6 @@ final class GtagWriter implements Writer
             throw WriterException::fromJsonException($e);
         }
 
-        return sprintf("gtag('event', '%s', %s);", $event::getName(), $json);
+        return sprintf('gtag("event", "%s", %s);', $event::getName(), $json);
     }
 }
