@@ -37,7 +37,7 @@ abstract class GenericEvent implements Event
                 $arr[$key] = $value;
             } elseif ($value instanceof ParametersAware) {
                 $arr[$key] = self::resolveArray($value->getParameters());
-            } elseif (is_array($value)) {
+            } elseif (is_array($value) && [] !== $value) {
                 $arr[$key] = self::resolveArray($value);
             }
         }

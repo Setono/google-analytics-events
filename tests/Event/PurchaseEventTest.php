@@ -11,6 +11,18 @@ use Setono\GoogleAnalyticsEvents\Event\Item\Item;
  */
 final class PurchaseEventTest extends AbstractEventTestCase
 {
+    /**
+     * @test
+     */
+    public function it_does_not_return_empty_items_array(): void
+    {
+        $event = PurchaseEvent::create('TRANS_1234');
+
+        self::assertEquals([
+            'transaction_id' => 'TRANS_1234',
+        ], $event->getParameters());
+    }
+
     protected function getEvent(): GenericEvent
     {
         return PurchaseEvent::create('TRANS_1234')
