@@ -16,7 +16,21 @@ composer require setono/google-analytics-events
 
 ## Usage
 
-TODO
+```php
+use Setono\GoogleAnalyticsEvents\Event\PurchaseEvent;
+use Setono\GoogleAnalyticsEvents\Writer\GtagWriter;
+
+$event = PurchaseEvent::create('TRANS_1234')
+            ->setCurrency('USD')
+            ->setValue(123.45)
+            ->setTax(10.45)
+            ->setShipping(3.32)
+            ->addItem(Item::create()->setId('SKU1234')->setName('Blue t-shirt'))
+        ;
+
+        $writer = new GtagWriter();
+        echo $writer->write($event); // output: gtag("event", "purchase", {"currency":"USD","transaction_id":"TRANS_1234","value":123.45,"shipping":3.32,"tax":10.45,"items":[{"item_id":"SKU1234","item_name":"Blue t-shirt","quantity":1}]});
+```
 
 ## References
 
