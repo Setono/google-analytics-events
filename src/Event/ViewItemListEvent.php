@@ -9,7 +9,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasItems;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasListId;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasListName;
 
-class ViewItemListEvent extends Event
+class ViewItemListEvent extends GenericEvent
 {
     use CreatesEmpty;
 

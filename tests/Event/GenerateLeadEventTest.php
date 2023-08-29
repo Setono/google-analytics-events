@@ -9,7 +9,7 @@ namespace Setono\GoogleAnalyticsEvents\Event;
  */
 final class GenerateLeadEventTest extends AbstractEventTestCase
 {
-    protected function getEvent(): Event
+    protected function getEvent(): GenericEvent
     {
         return GenerateLeadEvent::create()
             ->setCurrency('USD')

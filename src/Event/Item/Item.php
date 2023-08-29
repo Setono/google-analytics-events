@@ -9,6 +9,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\CreatesEmpty;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasAffiliation;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasCoupon;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasCurrency;
+use Setono\GoogleAnalyticsEvents\Event\Traits\HasCustomParameters;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasListId;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasListName;
 
@@ -21,6 +22,8 @@ class Item implements ParametersAware
     use HasCoupon;
 
     use HasCurrency;
+
+    use HasCustomParameters;
 
     use HasListId;
 
@@ -224,7 +227,7 @@ class Item implements ParametersAware
 
     public function getParameters(): array
     {
-        return array_filter([
+        $parameters = array_filter([
             'item_id' => $this->id,
             'item_name' => $this->name,
             'affiliation' => $this->affiliation,
@@ -245,5 +248,7 @@ class Item implements ParametersAware
             'price' => $this->price,
             'quantity' => $this->quantity,
         ]);
+
+        return array_merge($parameters, array_filter($this->getCustomParameters()));
     }
 }

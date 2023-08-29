@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Item\Item;
  */
 final class AddPaymentInfoEventTest extends AbstractEventTestCase
 {
-    protected function getEvent(): Event
+    protected function getEvent(): GenericEvent
     {
         return AddPaymentInfoEvent::create()
             ->setCurrency('USD')

@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Item\Item;
  */
 final class AddToCartEventTest extends AbstractEventTestCase
 {
-    protected function getEvent(): Event
+    protected function getEvent(): GenericEvent
     {
         return AddToCartEvent::create()
             ->setCurrency('USD')

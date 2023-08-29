@@ -9,7 +9,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasCurrency;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasItems;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
-class RemoveFromCartEvent extends Event
+class RemoveFromCartEvent extends GenericEvent
 {
     public const NAME = 'remove_from_cart';
 

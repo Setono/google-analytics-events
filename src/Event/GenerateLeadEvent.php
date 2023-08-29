@@ -8,7 +8,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\CreatesEmpty;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasCurrency;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
-class GenerateLeadEvent extends Event
+class GenerateLeadEvent extends GenericEvent
 {
     use CreatesEmpty;
 

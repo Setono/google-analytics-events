@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasItems;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasTransactionId;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
-class PurchaseEvent extends Event
+class PurchaseEvent extends GenericEvent
 {
     use HasCurrency;
 

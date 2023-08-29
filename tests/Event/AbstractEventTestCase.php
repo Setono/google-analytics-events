@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 abstract class AbstractEventTestCase extends TestCase
 {
-    abstract protected function getEvent(): Event;
+    abstract protected function getEvent(): GenericEvent;
 
     abstract protected function getExpectedParameters(): array;
 

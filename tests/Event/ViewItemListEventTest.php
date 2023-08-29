@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Item\Item;
  */
 final class ViewItemListEventTest extends AbstractEventTestCase
 {
-    protected function getEvent(): Event
+    protected function getEvent(): GenericEvent
     {
         return ViewItemListEvent::create()
             ->setListId('LIST_ID')

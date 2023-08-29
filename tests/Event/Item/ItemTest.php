@@ -37,6 +37,8 @@ final class ItemTest extends TestCase
         self::assertSame('ChIJIQBpAG2ahYAR_6128GcTUEo', $item->getLocationId());
         self::assertSame(9.99, $item->getPrice());
         self::assertSame(1, $item->getQuantity());
+        self::assertTrue($item->hasCustomParameter('google_business_vertical'));
+        self::assertSame('retail', $item->getCustomParameter('google_business_vertical'));
     }
 
     private function getItem(): Item
@@ -61,6 +63,7 @@ final class ItemTest extends TestCase
             ->setLocationId('ChIJIQBpAG2ahYAR_6128GcTUEo')
             ->setPrice(9.99)
             ->setQuantity(1)
+            ->setCustomParameter('google_business_vertical', 'retail')
         ;
     }
 }

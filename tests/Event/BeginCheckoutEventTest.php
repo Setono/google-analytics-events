@@ -11,7 +11,7 @@ use Setono\GoogleAnalyticsEvents\Event\Item\Item;
  */
 final class BeginCheckoutEventTest extends AbstractEventTestCase
 {
-    protected function getEvent(): Event
+    protected function getEvent(): GenericEvent
     {
         return BeginCheckoutEvent::create()
             ->setCurrency('USD')
