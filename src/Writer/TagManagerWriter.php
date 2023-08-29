@@ -8,7 +8,7 @@ use Setono\GoogleAnalyticsEvents\Event\AddPaymentInfoEvent;
 use Setono\GoogleAnalyticsEvents\Event\AddShippingInfoEvent;
 use Setono\GoogleAnalyticsEvents\Event\AddToCartEvent;
 use Setono\GoogleAnalyticsEvents\Event\BeginCheckoutEvent;
-use Setono\GoogleAnalyticsEvents\Event\GenericEvent;
+use Setono\GoogleAnalyticsEvents\Event\Event;
 use Setono\GoogleAnalyticsEvents\Event\PurchaseEvent;
 use Setono\GoogleAnalyticsEvents\Event\RemoveFromCartEvent;
 use Setono\GoogleAnalyticsEvents\Event\ViewCartEvent;
@@ -25,7 +25,7 @@ final class TagManagerWriter implements Writer
         $this->dataLayerVariable = $dataLayerVariable;
     }
 
-    public function write(GenericEvent $event): string
+    public function write(Event $event): string
     {
         $ecommerceEvents = [
             AddPaymentInfoEvent::getName(),
