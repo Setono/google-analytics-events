@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Setono\GoogleAnalyticsEvents\Event\Item;
 
+use Setono\GoogleAnalyticsEvents\Event\ParametersAware;
 use Setono\GoogleAnalyticsEvents\Event\Traits\CreatesEmpty;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasAffiliation;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasCoupon;
@@ -11,7 +12,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasCurrency;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasListId;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasListName;
 
-class Item
+class Item implements ParametersAware
 {
     use CreatesEmpty;
 
@@ -221,9 +222,6 @@ class Item
         return $this;
     }
 
-    /**
-     * @return array<string, scalar>
-     */
     public function getParameters(): array
     {
         return array_filter([
