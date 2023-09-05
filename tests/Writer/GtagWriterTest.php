@@ -27,7 +27,7 @@ final class GtagWriterTest extends TestCase
 
         $writer = new GtagWriter();
         self::assertSame(
-            'gtag("event", "purchase", {"currency":"USD","transaction_id":"TRANS_1234","value":123.45,"shipping":3.32,"tax":10.45,"items":[{"item_id":"SKU1234","item_name":"Blue t-shirt","quantity":1}],"user_status":"Crazy"});',
+            'gtag("event", "purchase", {"user_status":"Crazy","currency":"USD","transaction_id":"TRANS_1234","value":123.45,"shipping":3.32,"tax":10.45,"items":[{"item_id":"SKU1234","item_name":"Blue t-shirt","quantity":1}]});',
             $writer->write($event)
         );
     }
@@ -45,7 +45,7 @@ final class GtagWriterTest extends TestCase
 
         $writer = new GtagWriter();
         self::assertSame(
-            'gtag("event", "generate_lead", {"currency":"USD","value":123.45,"user_status":"Crazy"});',
+            'gtag("event", "generate_lead", {"user_status":"Crazy","currency":"USD","value":123.45});',
             $writer->write($event)
         );
     }

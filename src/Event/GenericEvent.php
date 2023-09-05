@@ -22,8 +22,8 @@ abstract class GenericEvent implements Event
         $parameters = $this->getParameterMapping();
 
         return self::resolveArray(array_merge(
-            $parameters,
-            array_filter($this->getCustomParameters())
+            array_filter($this->getCustomParameters()),
+            $parameters
         ));
     }
 

@@ -249,6 +249,6 @@ class Item implements ParametersAware
             'quantity' => $this->quantity,
         ]);
 
-        return array_merge($parameters, array_filter($this->getCustomParameters()));
+        return array_merge(array_filter($this->getCustomParameters()), $parameters);
     }
 }
