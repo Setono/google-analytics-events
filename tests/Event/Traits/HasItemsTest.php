@@ -6,6 +6,7 @@ namespace Setono\GoogleAnalyticsEvents\Event\Traits;
 
 use PHPUnit\Framework\TestCase;
 use Setono\GoogleAnalyticsEvents\Event\Item\Item;
+use Setono\GoogleAnalyticsEvents\Event\ItemsAware;
 
 final class HasItemsTest extends TestCase
 {
@@ -34,7 +35,7 @@ final class HasItemsTest extends TestCase
     }
 }
 
-final class ClassUsingHasItems
+final class ClassUsingHasItems implements ItemsAware
 {
     use HasItems;
 }

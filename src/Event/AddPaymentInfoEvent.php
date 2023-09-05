@@ -10,7 +10,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasCurrency;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasItems;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
-class AddPaymentInfoEvent extends GenericEvent
+class AddPaymentInfoEvent extends GenericEvent implements ItemsAware
 {
     use CreatesEmpty;
 

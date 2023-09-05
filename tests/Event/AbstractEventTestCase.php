@@ -22,4 +22,17 @@ abstract class AbstractEventTestCase extends TestCase
             $this->getEvent()->getParameters(),
         );
     }
+
+    /**
+     * @test
+     */
+    public function it_implements_items_aware_interface_if_applicable(): void
+    {
+        $event = $this->getEvent();
+        if (method_exists($event, 'getItems')) {
+            self::assertInstanceOf(ItemsAware::class, $event);
+        } else {
+            $this->markTestSkipped();
+        }
+    }
 }

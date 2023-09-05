@@ -9,7 +9,7 @@ use Setono\GoogleAnalyticsEvents\Event\Traits\HasCurrency;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasItems;
 use Setono\GoogleAnalyticsEvents\Event\Traits\HasValue;
 
-class AddToCartEvent extends GenericEvent
+class AddToCartEvent extends GenericEvent implements ItemsAware
 {
     use CreatesEmpty;
 
