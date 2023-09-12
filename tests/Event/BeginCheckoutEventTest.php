@@ -17,7 +17,7 @@ final class BeginCheckoutEventTest extends AbstractEventTestCase
             ->setCurrency('USD')
             ->setValue(123.45)
             ->setCoupon('SUMMER_SALE')
-            ->addItem(Item::create()->setId('SKU1234')->setName('Blue t-shirt'))
+            ->addItem(Item::create()->setItemId('SKU1234')->setItemName('Blue t-shirt'))
         ;
     }
 

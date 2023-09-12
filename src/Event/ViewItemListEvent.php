@@ -27,8 +27,8 @@ class ViewItemListEvent extends GenericEvent implements ItemsAware
     protected function getParameterMapping(): array
     {
         return [
-            'item_list_id' => $this->listId,
-            'item_list_name' => $this->listName,
+            'item_list_id' => $this->itemListId,
+            'item_list_name' => $this->itemListName,
             'items' => $this->items,
         ];
     }

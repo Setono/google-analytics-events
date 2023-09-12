@@ -14,7 +14,7 @@ final class HasListIdTest extends TestCase
     public function it_instantiates(): void
     {
         $obj = new ClassUsingHasListId();
-        self::assertNull($obj->getListId());
+        self::assertNull($obj->getItemListId());
     }
 
     /**
@@ -23,8 +23,8 @@ final class HasListIdTest extends TestCase
     public function it_is_mutable(): void
     {
         $obj = new ClassUsingHasListId();
-        $obj->setListId('value');
-        self::assertSame('value', $obj->getListId());
+        $obj->setItemListId('value');
+        self::assertSame('value', $obj->getItemListId());
     }
 }
 
