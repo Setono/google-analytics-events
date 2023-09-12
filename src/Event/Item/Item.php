@@ -29,27 +29,27 @@ class Item implements ParametersAware
 
     use HasListName;
 
-    protected ?string $id = null;
+    protected ?string $itemId = null;
 
-    protected ?string $name = null;
+    protected ?string $itemName = null;
 
     protected ?float $discount = null;
 
     protected ?int $index = null;
 
-    protected ?string $brand = null;
+    protected ?string $itemBrand = null;
 
-    protected ?string $category = null;
+    protected ?string $itemCategory = null;
 
-    protected ?string $category2 = null;
+    protected ?string $itemCategory2 = null;
 
-    protected ?string $category3 = null;
+    protected ?string $itemCategory3 = null;
 
-    protected ?string $category4 = null;
+    protected ?string $itemCategory4 = null;
 
-    protected ?string $category5 = null;
+    protected ?string $itemCategory5 = null;
 
-    protected ?string $variant = null;
+    protected ?string $itemVariant = null;
 
     protected ?string $locationId = null;
 
@@ -57,26 +57,26 @@ class Item implements ParametersAware
 
     protected int $quantity = 1;
 
-    public function getId(): ?string
+    public function getItemId(): ?string
     {
-        return $this->id;
+        return $this->itemId;
     }
 
-    public function setId(?string $id): self
+    public function setItemId(?string $itemId): self
     {
-        $this->id = $id;
+        $this->itemId = $itemId;
 
         return $this;
     }
 
-    public function getName(): ?string
+    public function getItemName(): ?string
     {
-        return $this->name;
+        return $this->itemName;
     }
 
-    public function setName(?string $name): self
+    public function setItemName(?string $itemName): self
     {
-        $this->name = $name;
+        $this->itemName = $itemName;
 
         return $this;
     }
@@ -105,86 +105,86 @@ class Item implements ParametersAware
         return $this;
     }
 
-    public function getBrand(): ?string
+    public function getItemBrand(): ?string
     {
-        return $this->brand;
+        return $this->itemBrand;
     }
 
-    public function setBrand(?string $brand): self
+    public function setItemBrand(?string $itemBrand): self
     {
-        $this->brand = $brand;
+        $this->itemBrand = $itemBrand;
 
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getItemCategory(): ?string
     {
-        return $this->category;
+        return $this->itemCategory;
     }
 
-    public function setCategory(?string $category): self
+    public function setItemCategory(?string $itemCategory): self
     {
-        $this->category = $category;
+        $this->itemCategory = $itemCategory;
 
         return $this;
     }
 
-    public function getCategory2(): ?string
+    public function getItemCategory2(): ?string
     {
-        return $this->category2;
+        return $this->itemCategory2;
     }
 
-    public function setCategory2(?string $category2): self
+    public function setItemCategory2(?string $itemCategory2): self
     {
-        $this->category2 = $category2;
+        $this->itemCategory2 = $itemCategory2;
 
         return $this;
     }
 
-    public function getCategory3(): ?string
+    public function getItemCategory3(): ?string
     {
-        return $this->category3;
+        return $this->itemCategory3;
     }
 
-    public function setCategory3(?string $category3): self
+    public function setItemCategory3(?string $itemCategory3): self
     {
-        $this->category3 = $category3;
+        $this->itemCategory3 = $itemCategory3;
 
         return $this;
     }
 
-    public function getCategory4(): ?string
+    public function getItemCategory4(): ?string
     {
-        return $this->category4;
+        return $this->itemCategory4;
     }
 
-    public function setCategory4(?string $category4): self
+    public function setItemCategory4(?string $itemCategory4): self
     {
-        $this->category4 = $category4;
+        $this->itemCategory4 = $itemCategory4;
 
         return $this;
     }
 
-    public function getCategory5(): ?string
+    public function getItemCategory5(): ?string
     {
-        return $this->category5;
+        return $this->itemCategory5;
     }
 
-    public function setCategory5(?string $category5): self
+    public function setItemCategory5(?string $itemCategory5): self
     {
-        $this->category5 = $category5;
+        $this->itemCategory5 = $itemCategory5;
 
         return $this;
     }
 
-    public function getVariant(): ?string
+    public function getItemVariant(): ?string
     {
-        return $this->variant;
+        return $this->itemVariant;
     }
 
-    public function setVariant(?string $variant): self
+    public function setItemVariant(?string $itemVariant): self
     {
-        $this->variant = $variant;
+        $this->itemVariant = $itemVariant;
 
         return $this;
     }
@@ -228,22 +228,22 @@ class Item implements ParametersAware
     public function getParameters(): array
     {
         $parameters = array_filter([
-            'item_id' => $this->id,
-            'item_name' => $this->name,
+            'item_id' => $this->itemId,
+            'item_name' => $this->itemName,
             'affiliation' => $this->affiliation,
             'coupon' => $this->coupon,
             'currency' => $this->currency,
             'discount' => $this->discount,
             'index' => $this->index,
-            'item_brand' => $this->brand,
-            'item_category' => $this->category,
-            'item_category2' => $this->category2,
-            'item_category3' => $this->category3,
-            'item_category4' => $this->category4,
-            'item_category5' => $this->category5,
-            'item_list_id' => $this->listId,
-            'item_list_name' => $this->listName,
-            'item_variant' => $this->variant,
+            'item_brand' => $this->itemBrand,
+            'item_category' => $this->itemCategory,
+            'item_category2' => $this->itemCategory2,
+            'item_category3' => $this->itemCategory3,
+            'item_category4' => $this->itemCategory4,
+            'item_category5' => $this->itemCategory5,
+            'item_list_id' => $this->itemListId,
+            'item_list_name' => $this->itemListName,
+            'item_variant' => $this->itemVariant,
             'location_id' => $this->locationId,
             'price' => $this->price,
             'quantity' => $this->quantity,

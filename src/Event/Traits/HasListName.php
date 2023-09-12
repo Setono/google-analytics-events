@@ -6,19 +6,19 @@ namespace Setono\GoogleAnalyticsEvents\Event\Traits;
 
 trait HasListName
 {
-    protected ?string $listName = null;
+    protected ?string $itemListName = null;
 
-    public function getListName(): ?string
+    public function getItemListName(): ?string
     {
-        return $this->listName;
+        return $this->itemListName;
     }
 
     /**
      * @return static
      */
-    public function setListName(?string $listName): self
+    public function setItemListName(?string $itemListName): self
     {
-        $this->listName = $listName;
+        $this->itemListName = $itemListName;
 
         return $this;
     }

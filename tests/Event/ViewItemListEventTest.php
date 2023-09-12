@@ -14,9 +14,9 @@ final class ViewItemListEventTest extends AbstractEventTestCase
     protected function getEvent(): GenericEvent
     {
         return ViewItemListEvent::create()
-            ->setListId('LIST_ID')
-            ->setListName('List name')
-            ->addItem(Item::create()->setId('SKU1234')->setName('Blue t-shirt'))
+            ->setItemListId('LIST_ID')
+            ->setItemListName('List name')
+            ->addItem(Item::create()->setItemId('SKU1234')->setItemName('Blue t-shirt'))
         ;
     }
 

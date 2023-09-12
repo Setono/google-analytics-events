@@ -14,7 +14,7 @@ final class HasListNameTest extends TestCase
     public function it_instantiates(): void
     {
         $obj = new ClassUsingHasListName();
-        self::assertNull($obj->getListName());
+        self::assertNull($obj->getItemListName());
     }
 
     /**
@@ -23,8 +23,8 @@ final class HasListNameTest extends TestCase
     public function it_is_mutable(): void
     {
         $obj = new ClassUsingHasListName();
-        $obj->setListName('value');
-        self::assertSame('value', $obj->getListName());
+        $obj->setItemListName('value');
+        self::assertSame('value', $obj->getItemListName());
     }
 }
 

@@ -30,7 +30,7 @@ final class PurchaseEventTest extends AbstractEventTestCase
             ->setValue(123.45)
             ->setTax(10.45)
             ->setShipping(3.32)
-            ->addItem(Item::create()->setId('SKU1234')->setName('Blue t-shirt'))
+            ->addItem(Item::create()->setItemId('SKU1234')->setItemName('Blue t-shirt'))
         ;
     }
 
